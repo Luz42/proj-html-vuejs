@@ -56,6 +56,10 @@ export default {
         //   padding-bottom: 20% !important;
         // border-bottom: 20px solid $mandy !important;
           button{
+            &:hover{
+              background-color: $white !important;
+              color: black;
+            }
             text-transform: uppercase;
             border: $white 1px solid;
             padding: 8px 25px;
