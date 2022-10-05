@@ -23,9 +23,24 @@ export default {
 
 <style lang="scss">
   @import '~bootstrap/scss/bootstrap.scss';
-  
+  @import 'https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+Pro&display=swap';
+  @import '@/variables.scss';
+
+  .ae-flex-end-element{
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+  }
+
+  .ae-flex-center-element{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+  }
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
