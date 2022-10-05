@@ -6,11 +6,11 @@
         <div class="col ae-flex-end-element">icona menu</div>
       </div>
       <div class="row">
-        <div class="col p-5 ae-flex-center-element">
+        <div class="col ae-flex-center-element">
           <h1>Untold Stories</h1>
           <p>There is an untold story behind every favorite song.</p>
-          <div class="text-uppercase">
-            <button>latest album</button>
+          <div class="text-uppercase d-flex gap-2 p-4">
+            <button class="ae-color">latest album</button>
             <button>live dates</button>
           </div>
         </div>
@@ -32,18 +32,36 @@ export default {
   header{
     background-image: url('../assets/images/home_slider.jpg');
     background-position-y: center;
+    background-size: cover;
     color: $white;
-    h1{
-      font-size: 8em;
-      font-weight: bolder;
-    };
-    p{
-      font-style: italic;
-      font-family: $serif;
+    .row .col.ae-flex-center-element{
+      padding: 10%;
+        h1{
+        font-size: 7em;
+        font-weight: bolder;
+        };
+        p{
+          font-style: italic;
+          font-family: $serif;
+        }
+        div{
+        //   padding-bottom: 20% !important;
+        // border-bottom: 20px solid $mandy !important;
+          button{
+            text-transform: uppercase;
+            border: $white 1px solid;
+            padding: 8px 25px;
+            color: $white;
+            background-color: rgba(255, 255, 255, 0);
+            &.ae-color{
+              background-color: $mandy;
+              border: 0;
+            }
+          }
+        }
+        
     }
-    button{
-      text-transform: uppercase;
-    }
+    
   }
 
 </style>
