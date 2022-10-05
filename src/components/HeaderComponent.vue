@@ -1,19 +1,27 @@
 <template>
   <header>
     <div class="container-fluid">
-      <div class="row p-3">
-        <div class="col"><img src="@/assets/images/avada-music-logo.png" alt=""></div>
-        <div class="col ae-flex-end-element">icona menu</div>
-      </div>
+      <section class="row p-3">
+        <!-- LOGO -->
+        <div class="col">
+          <img src="@/assets/images/avada-music-logo.png" alt="">
+        </div>
+        <!-- MENU BARS -->
+        <div class="col ae-flex-end-element">
+          <font-awesome-icon icon="fa-solid fa-bars" style="font-size:2em" />
+        </div>
+      </section>
       <div class="row">
-        <div class="col ae-flex-center-element">
+        <!-- CONTENT -->
+        <section class="col ae-flex-center-element">
           <h1>Untold Stories</h1>
           <p>There is an untold story behind every favorite song.</p>
           <div class="text-uppercase d-flex gap-2 p-4">
             <button class="ae-color">latest album</button>
             <button>live dates</button>
           </div>
-        </div>
+        </section>
+        <!-- end CONTENT -->
       </div>
     </div>
   </header>
