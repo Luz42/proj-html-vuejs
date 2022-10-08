@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/variables.scss';
+@import '@/variables-utiles.scss';
     button{
         width: 100%;
         padding: 3%;

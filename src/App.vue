@@ -24,7 +24,23 @@ export default {
 <style lang="scss">
   @import '~bootstrap/scss/bootstrap.scss';
   @import 'https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+Pro&display=swap';
-  @import '@/variables.scss';
+  @import '@/variables-utiles.scss';
+
+  // @mixin button-layout{
+  //   &:hover{
+  //             background-color: $white !important;
+  //             color: black;
+  //           }
+  //         text-transform: uppercase;
+  //         border: $white 1px solid;
+  //         padding: 8px 25px;
+  //         color: $white;
+  //         background-color: rgba(255, 255, 255, 0);
+  //           &.ae-color{
+  //             background-color: $mandy;
+  //             border: 0;
+  // }
+  // };
 
   .ae-flex-end-element{
     display: flex !important;

@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '@/variables.scss';
+  @import '@/variables-utiles.scss';
 
 section.container-fluid{
       background-color: inherit;

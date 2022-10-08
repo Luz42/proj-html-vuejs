@@ -49,7 +49,11 @@
       <img src="@/assets/images/band_interview_play_icon.png" alt="">
     </div>
     <SectionsTitlesComponent title="live dates"/>
-    
+    <div class="container-xl">
+      <div class="row gap-3">
+        <DropdownComponent/>
+      </div>
+    </div>
   </section>
   </main>
 </template>
@@ -57,18 +61,21 @@
 <script>
 import SectionsTitlesComponent from './SectionsTitlesComponent.vue';
 import ButtonComponent from './ButtonComponent.vue';
+import DropdownComponent from './DropdownComponent.vue';
 
 export default {
     name: "MainComponent",
-    components: { 
-      SectionsTitlesComponent,
-      ButtonComponent
-     }
-}
+    components: {
+    SectionsTitlesComponent,
+    ButtonComponent,
+    DropdownComponent
+},
+     
+  }
 </script>
 
 <style scoped lang="scss">
-  @import '@/variables.scss';
+  @import '@/variables-utiles.scss';
 
  main{
   background-color: $charade;
