@@ -41,10 +41,17 @@ export default {
 @import '@/variables-utiles.scss';
 .col-12{
     background-color: $median-charade;
+    &:hover{
+    background-color: $lynch;
+    }&:hover #icons{
+        background-color: $mandy;
+    }
     cursor: pointer;
-    h4,
-    #icons{
+    h4{
         color: $mandy
+    }
+    #icons{
+    color: $white;
     }
     #icons.active{
         background-color: $mandy;
@@ -61,7 +68,7 @@ export default {
     button{
         @include button-layout();
     }
-}
 
+}
 
 </style>
