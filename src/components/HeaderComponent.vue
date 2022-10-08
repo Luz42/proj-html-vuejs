@@ -24,6 +24,15 @@
         <!-- end CONTENT -->
       </div>
     </div>
+    <section class="container-fluid">
+      <div class="row ae-flex-center-element">
+        <div class="col-6 ae-flex-center-element text-center">
+          <h2 class="m-0">Music is life</h2>
+          <hr class="w-25 m-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus culpa quas minima libero, esse omnis enim repellendus modi repudiandae maiores.</p>
+        </div>
+      </div>
+    </section>
   </header>
 </template>
 
@@ -42,7 +51,7 @@ export default {
     background-position-y: center;
     background-size: cover;
     color: $white;
-    .row .col.ae-flex-center-element{
+    section.col.ae-flex-center-element{
       padding: 10%;
         h1{
         font-size: 7em;
@@ -51,9 +60,10 @@ export default {
         p{
           font-style: italic;
           font-family: $serif;
+          font-size: 1.2em
         }
         div{
-        //   padding-bottom: 20% !important;
+        // padding-bottom: 20% !important;
         // border-bottom: 20px solid $mandy !important;
           button{
             &:hover{
@@ -70,10 +80,25 @@ export default {
               border: 0;
             }
           }
-        }
-        
+        } 
     }
-    
+    section.container-fluid{
+      background-color: #323844;
+      .row{
+      padding-bottom: 50px;
+
+      }
+      h2{
+        font-size: 3em !important;
+        font-weight: bold;
+        padding: 50px 10% 0 10%;
+        border-top: 15px solid $mandy
+      };
+      p{
+        color: $bombay;
+        font-family: $serif;
+      }
+    }
   }
 
 </style>
