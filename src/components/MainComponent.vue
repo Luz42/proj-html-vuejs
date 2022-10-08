@@ -43,6 +43,14 @@
     </div>
     <ButtonComponent sectionName="latest news"/>
   </section>
+  <section id="Live-dates">
+    <div class="text-center">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi suscipit, mollitia fugiat officiis molestiae totam, sit reprehenderit laborum, unde tempora explicabo at neque non doloremque magni assumenda quas tenetur!</p>
+      <img src="@/assets/images/band_interview_play_icon.png" alt="">
+    </div>
+    <SectionsTitlesComponent title="live dates"/>
+    
+  </section>
   </main>
 </template>
 
@@ -79,6 +87,18 @@ export default {
     h3{
       color: $white;
       font-weight: bold;
+    }
+  }
+  #Live-dates .text-center{
+    background-image: url('@/assets/images/home-testimonial-parallax.jpg');
+    background-position-y: center;
+    background-size: cover;
+    color: $white;
+    padding: 10% 20%;
+    p{
+      font-style: italic;
+      font-family: $serif;
+      //font-size: 1.2em
     }
   }  
  }
