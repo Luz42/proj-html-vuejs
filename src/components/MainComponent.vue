@@ -41,16 +41,20 @@
         </div>
       </div>
     </div>
+    <ButtonComponent sectionName="latest news"/>
   </section>
   </main>
 </template>
 
 <script>
 import SectionsTitlesComponent from './SectionsTitlesComponent.vue';
+import ButtonComponent from './ButtonComponent.vue';
+
 export default {
     name: "MainComponent",
     components: { 
-      SectionsTitlesComponent
+      SectionsTitlesComponent,
+      ButtonComponent
      }
 }
 </script>
