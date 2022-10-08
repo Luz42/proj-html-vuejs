@@ -24,21 +24,23 @@
         <!-- end CONTENT -->
       </div>
     </div>
-    <section class="container-fluid">
-      <div class="row ae-flex-center-element">
-        <div class="col-6 ae-flex-center-element text-center">
-          <h2 class="m-0">Music is life</h2>
-          <hr class="w-25 m-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus culpa quas minima libero, esse omnis enim repellendus modi repudiandae maiores.</p>
-        </div>
-      </div>
-    </section>
-  </header>
+    <!-- SECTION WITH COLORED BAR -->
+    <div class="position-relative">
+      <div id="ae-bar"></div>
+      <SectionsTitlesComponent title="music is life"/>
+    </div>
+    <!-- end SECTION WITH COLORED BAR -->
+</header>
 </template>
 
 <script>
+import SectionsTitlesComponent from './SectionsTitlesComponent.vue';
+
 export default {
- name: 'HeaderComponent'
+ name: 'HeaderComponent',
+ components:{
+    SectionsTitlesComponent,
+}
 }
 </script>
 
@@ -62,43 +64,33 @@ export default {
           font-family: $serif;
           font-size: 1.2em
         }
-        div{
-        // padding-bottom: 20% !important;
-        // border-bottom: 20px solid $mandy !important;
-          button{
+
+        button{
             &:hover{
               background-color: $white !important;
               color: black;
             }
-            text-transform: uppercase;
-            border: $white 1px solid;
-            padding: 8px 25px;
-            color: $white;
-            background-color: rgba(255, 255, 255, 0);
+          text-transform: uppercase;
+          border: $white 1px solid;
+          padding: 8px 25px;
+          color: $white;
+          background-color: rgba(255, 255, 255, 0);
             &.ae-color{
               background-color: $mandy;
               border: 0;
             }
-          }
         } 
     }
-    section.container-fluid{
-      background-color: #323844;
-      .row{
-      padding-bottom: 50px;
-
-      }
-      h2{
-        font-size: 3em !important;
-        font-weight: bold;
-        padding: 50px 10% 0 10%;
-        border-top: 15px solid $mandy
-      };
-      p{
-        color: $bombay;
-        font-family: $serif;
-      }
-    }
   }
-
+  .position-relative{
+    background-color: $median-charade;
+      #ae-bar{
+      position: absolute;
+      padding: 6px 150px;
+      background-color: $mandy;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+  }
+   
 </style>
