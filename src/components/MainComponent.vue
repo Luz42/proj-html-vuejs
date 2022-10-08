@@ -49,11 +49,12 @@
       <img src="@/assets/images/band_interview_play_icon.png" alt="">
     </div>
     <SectionsTitlesComponent title="live dates"/>
-    <div class="container-xl">
+    <div class="container-xl pb-5">
       <div class="row gap-3">
         <DropdownComponent/>
       </div>
     </div>
+    <ButtonComponent sectionName="live dates"/>
   </section>
   </main>
 </template>
