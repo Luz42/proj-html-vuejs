@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComponent/>
-    <MainComponent/>
+    <MainComponent :cards="cards"/>
     <FooterComponent/>
   </div>
 </template>
@@ -10,9 +10,14 @@
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import { cardsArray } from './assets/images/data.js'
+
 
 export default {
   name: 'App',
+  data(){return{
+    cards: [...cardsArray]
+    }},
   components: {
     HeaderComponent,
     MainComponent,
