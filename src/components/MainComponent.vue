@@ -1,44 +1,15 @@
 <template>
   <main>
-    <section id="Band-news">
+    <!-- LATEST BAND NEWS -->
+  <section id="Band-news">
     <SectionsTitlesComponent title="latest band news"/>
     <div class="container-xl pb-5">
-      <CardContainer :cards="cards" />
-      <!-- <div class="row">
-        <div class="col-8">
-          <div class="row">
-            <div class="col-12 mb-4">
-              <CardComponent/>
-            </div>
-            <div class="col-6">
-              <img class="img-fluid" src="@/assets/images/blog-post3-600x900.jpg" alt="">
-            </div>
-            <div class="col-6">
-              <img class="img-fluid" src="@/assets/images/blog-post4-600x900.jpg" alt="">
-            </div>
-            <div class="col-12 mt-4">
-              <img class="img-fluid" src="@/assets/images/blog_flavor_rock-1200x600.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-4 d-flex">
-          <div class="row gap-4">
-            <div class="col-12">
-              <img style="height:100%; object-fit: cover;" class="img-fluid" src="@/assets/images/blog-post1-600x900.jpg" alt="">
-            </div>
-            <div class="col-12">
-              <img style="height:100%; object-fit: cover;" class="img-fluid" src="@/assets/images/blog-post2-600x900.jpg" alt="">
-            </div>
-          </div>
-        </div>
-            
-          </div> -->
-        </div>
-
-            
-
+      <CardContainer :cards="cards" />  
+    </div>
     <ButtonComponent sectionName="latest news"/>
   </section>
+    <!-- end LATEST BAND NEWS -->
+
   <section id="Live-dates">
     <div class="text-center">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi suscipit, mollitia fugiat officiis molestiae totam, sit reprehenderit laborum, unde tempora explicabo at neque non doloremque magni assumenda quas tenetur!</p>
@@ -47,7 +18,7 @@
     <SectionsTitlesComponent title="live dates"/>
     <div class="container-xl pb-5">
       <div class="row gap-3">
-        <DropdownComponent/>
+        <DropdownComponent :date="date" :index="index" v-for="(date, index) in dates" :key="date.date"/>
       </div>
     </div>
     <ButtonComponent sectionName="live dates"/>
@@ -64,16 +35,17 @@ import CardContainer from './CardContainer.vue';
 
 export default {
     name: "MainComponent",
+
     props:{
-      cards: Array
+      cards: Array,
+      dates: Array
     },
     components: {
     SectionsTitlesComponent,
     ButtonComponent,
     DropdownComponent,
     CardContainer
-    },
-
+    }
   }
 </script>
 
@@ -92,7 +64,6 @@ export default {
     p{
       font-style: italic;
       font-family: $serif;
-      //font-size: 1.2em
     }
   }  
  }

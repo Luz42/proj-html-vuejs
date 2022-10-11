@@ -1,9 +1,11 @@
 <template>
   <div class="col-12 p-3" @click="showDropdown">
     <div class="d-flex">
-        <font-awesome-icon id="icons" :class="[active ? 'active' : '', 'p-1 align-self-center']" :icon="['fa-solid', active ? 'fa-minus' :'fa-plus']" />
-            <!-- <font-awesome-icon v-else icon="fa-solid fa-minus" /> -->
-        <h4 class="ps-3 text-uppercase m-0" >17/08/2020 gem festival 2020 anakalia, georgia</h4>
+        <font-awesome-icon 
+            id="icons" 
+            :class="[active ? 'active' : '', 'p-1 align-self-center']" 
+            :icon="['fa-solid', active ? 'fa-minus' :'fa-plus']" />
+        <h4 class="ps-3 text-uppercase m-0" >{{date.date}} {{date.place}}</h4>
     </div>
         
         <!-- DROPDOWN -->
@@ -12,7 +14,7 @@
             <div class="col-8 p-4">
                 <h3>Untold stories</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum temporibus nulla animi soluta natus vero dolore aperiam blanditiis iusto expedita.</p>
-                <button class="ae-color">book now</button>
+                <button @click="stopPropagation($event)" class="ae-color">book now</button>
             </div>
         </div>
         <!-- end DROPDOWN -->
@@ -26,11 +28,17 @@
 export default {
     name: 'DropdownComponent',
     data(){return{
-        active: false
+        active: false,
     }},
+    props:{
+        date: Object,
+    },
     methods:{
-        showDropdown(){
-            this.active = !this.active
+        showDropdown(){           
+            this.active = !this.active        
+        },
+        stopPropagation(event){
+            event.stopPropagation()
         }
     }
 

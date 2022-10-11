@@ -29,4 +29,27 @@ export const cardsArray = [
         title: 'The flavor of rock',
         src: '_flavor_rock-1200x600'
     }
+];
+
+export const liveDates = [
+    {
+        date: '17/08/2020',
+        place: 'gem festival 2020 anakalia, georgia'
+    },
+    {
+        date: '24/09/2020',
+        place: 'groovefest dominical republic'
+    },
+    {
+        date: '31/10/2020',
+        place: 'oasis festival 2020 marrakech, marocco'
+    },
+    {
+        date: '07/11/2020',
+        place: 'moga festival - essaouria, marocco'
+    },
+    {
+        date: '10/12/2020',
+        place: 'envision festival - uvita, costa rica'
+    }
 ]
